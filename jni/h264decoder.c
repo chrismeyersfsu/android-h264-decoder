@@ -134,6 +134,8 @@ JNIEXPORT void Java_com_pestermypet_android_media_H264Decoder_nativeDestroy(JNIE
 
 JNIEXPORT jint Java_com_pestermypet_android_media_H264Decoder_consumeNalUnitsFromDirectBuffer(JNIEnv* env, jobject thiz, jobject nal_units, jint num_bytes, jlong pkt_pts) {
   DecoderContext *ctx = get_ctx(env, thiz);
+  /* CHRIS MEYERS added, until we figure out what this does, set it to something that may work  */
+  pkt_pts = AV_NOPTS_VALUE;
 
   void *buf = NULL;
   if (nal_units == NULL) {
