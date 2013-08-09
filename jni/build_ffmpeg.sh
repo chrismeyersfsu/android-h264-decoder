@@ -17,7 +17,7 @@
 
 set -e
 
-NDK=~/android-ndk
+NDK=~/android-ndk-r8e
 ARM_PLATFORM=$NDK/platforms/android-5/arch-arm/
 ARM_PREBUILT=$NDK/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86
 X86_PLATFORM=$NDK/platforms/android-9/arch-x86/
